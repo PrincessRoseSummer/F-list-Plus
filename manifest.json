@@ -1,0 +1,20 @@
+{
+  "name": "F-list+",
+  "version": "0.1.0",
+  "description": "Application to enhance the F-list user experience.",
+  "manifest_version": 3,
+  "author": "Mariah Crayfish",
+  "host_permissions": ["https://www.f-list.net/*"],
+  
+  "content_scripts": [
+  {
+	"matches": ["https://www.f-list.net/character_edit.php?id=*"],
+	"js": ["upload.js"]
+  }
+  ],
+  "web_accessible_resources": [{
+  "resources": ["code.js"],
+  "matches": ["<all_urls>"]
+}]
+
+}
