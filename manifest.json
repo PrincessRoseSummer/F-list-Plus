@@ -10,10 +10,13 @@
   {
 	"matches": ["https://www.f-list.net/character_edit.php?id=*"],
 	"js": ["upload.js"]
-  }
-  ],
+  },
+  {
+    "matches": ["https://www.f-list.net/experimental/subfetish.php?c=subfetish%20test"],
+    "js": ["auto.js"]
+  }],
   "web_accessible_resources": [{
-  "resources": ["code.js"],
+  "resources": ["code.js", "kinkAutomation.js", "a.js"],
   "matches": ["<all_urls>"]
 }]
 
