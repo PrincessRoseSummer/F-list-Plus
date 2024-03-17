@@ -14,11 +14,18 @@ function uploadImageSet(imageNum){
 
 async function uploadImages() {
   fl = document.querySelector("#imagefileHolder").files.length;
+  disableButton();
   for (let i = 0; i < fl; i++) {
     console.log("Image " + i);
     uploadImageSet(i);
     await sleep(2000);
   }
+}
+
+async function disableButton(){
+  document.getElementById("uploadimagesbutton").disabled = true;
+  await sleep(10000);
+  document.getElementById("uploadimagesbutton").disabled = false;
 }
 
 document.querySelector("#CharacterAddImageSection").innerHTML = `
