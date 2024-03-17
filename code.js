@@ -22,7 +22,7 @@ async function uploadImages() {
 }
 
 document.querySelector("#CharacterAddImageSection").innerHTML = `
-<label for="imagefile">Select multiple files</label>
+<label for="imagefile" style="padding: 0 15px;">Select multiple files</label>
 <input id="imagefileHolder" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
 <input type="file" id="imagefile" disabled hidden>
 <input id=\"addimagebutton\" type=\"button\" onclick=\"uploadImage(); return false;\" value=\"Add Image\" disabled hidden>
