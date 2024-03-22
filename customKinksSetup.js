@@ -1,6 +1,4 @@
 var s = document.createElement('script');
-s.src = chrome.runtime.getURL('uploadGallery.js');
-s.onload = function() {
-    this.remove();
-};
+s.src = chrome.runtime.getURL('customKinks.js');
+s.onload = function() { this.remove(); };
 (document.head || document.documentElement).appendChild(s);

@@ -1,23 +1,30 @@
 {
   "name": "F-list+",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Application to enhance the F-list user experience.",
   "manifest_version": 3,
   "author": "Mariah Crayfish",
-  "host_permissions": ["https://www.f-list.net/*"],
   
   "content_scripts": [
   {
 	"matches": ["https://www.f-list.net/character_edit.php?id=*"],
-	"js": ["upload.js"]
+	"js": ["upload.js", "customKinksSetup.js"]
   },
   {
-    "matches": ["https://www.f-list.net/experimental/subfetish.php?c=subfetish%20test"],
-    "js": ["auto.js"]
+    "matches": ["https://www.f-list.net/experimental/subfetish.php?c=*"],
+    "js": ["kinkAutomationSetUp.js"]
   }],
   "web_accessible_resources": [{
-  "resources": ["code.js", "kinkAutomation.js", "a.js"],
+  "resources": ["uploadGallery.js", "kinkAutomation.js", "customKinks.js"],
   "matches": ["<all_urls>"]
-}]
+}],
+    "icons": {
+      "128": "icon.png" 
+
+    },
+    "action": {
+      "default_title": "Click Me",
+      "default_popup": "popup.html"
+    }
 
 }
